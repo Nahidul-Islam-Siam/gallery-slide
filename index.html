@@ -6,125 +6,124 @@
   <title>Document</title>
 
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
-  <!-- font awesome cdn  -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  
+
   <style>
-    /* Swiper container with custom width and centered */
+    /* Custom Swiper container */
     .swiper-container {
-      max-width: 450px; /* Adjust width as needed */
-      margin: 0 auto; /* Center the container horizontally */
+      max-width: 450px;
+      margin: 0 auto;
     }
 
-    /* Navigation button styles */
+    /* Custom navigation styles */
     .swiper-button-next,
     .swiper-button-prev {
-      /* background-color: rgba(0, 0, 0, 0.7); Semi-transparent dark background */
-      color: black; /* White icon color */
-      /* border-radius: 50%; Circular shape */
-      /* width: 45px; */
-      /* height: 45px; */
+      color: black;
       display: flex;
       align-items: center;
       justify-content: center;
-      /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); Shadow effect */
       transition: transform 0.3s, background-color 0.3s;
     }
 
     .swiper-button-next i,
     .swiper-button-prev i {
-      font-size: 20px; /* Adjust icon size */
+      font-size: 20px;
     }
 
-    /* Custom navigation positioning */
     .swiper-navigation {
       position: absolute;
-      bottom: 50%; /* Position it at the bottom */
+      bottom: 50%;
       left: 50%;
       transform: translateX(-50%);
       display: flex;
       justify-content: space-between;
-      width: 100%; /* Ensure it spans the entire width */
-      z-index: 10; /* Ensure navigation is above the slides */
-      padding: 0 20px; /* Add some padding */
+      width: 100%;
+      z-index: 10;
+      padding: 0 20px;
     }
 
-    .custom-next-button, .custom-prev-button {
+    .custom-next-button,
+    .custom-prev-button {
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
-    /* Custom positioning for next/prev buttons */
-    .custom-next-button {
-      right: 20px;
-    }
-
-    .custom-prev-button {
-      left: 20px;
-    }
-
     .swiper-container:hover .swiper-navigation {
-  opacity: 1;
-}
+      opacity: 1;
+    }
 
-.swiper-navigation {
-  opacity: 0; /* Initially hide the navigation */
-  transition: opacity 0.3s; /* Smooth transition on hover */
-}
+    .swiper-navigation {
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
 
-.left-navigation{
-    transform: rotate(180deg);
-}
+    .left-navigation {
+      transform: rotate(180deg);
+    }
+
+    /* Style for the size options overlay */
+    .size-options {
+      position: absolute;
+      bottom: 10px;
+      left: 4%;
+      text-align: left;
+      width: 100%;
+      color: black;
+      /* background: rgba(0, 0, 0, 0.5); */
+      padding: 5px 0;
+      opacity: 0; /* Initially hidden */
+      transition: opacity 0.3s; /* Smooth transition on hover */
+    }
+
+    /* Show size options on hover */
+    .swiper-container:hover .size-options {
+      opacity: 1;
+    }
   </style>
 </head>
 <body>
-    <div class="swiper-container max-w-9 mx-auto overflow-hidden relative">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide relative flex flex-col items-center justify-center text-center">
-            <img src="./images/136_20f1cfb103-fw24-ecom-8088-full.avif" alt="Item 1" />
-            <p>
-                <span>XS </span> <span> S</span> <span> M </span> <span>L </span> <span>XL</span>
-                </p>
-          </div>
-          <div class="swiper-slide relative flex flex-col items-center justify-center text-center">
-            <img src="./images/136_85b7022b47-fw24-ecom-8063-full.avif" alt="Item 2" />
-            <span>XS </span> <span> S</span> <span> M </span> <span>L </span> <span>XL</span>
-          </div>
-          <div class="swiper-slide relative flex flex-col items-center justify-center text-center">
-            <img src="./images/146_d79a018132-fw24-ecom-7904-full.webp" alt="Item 3" />
-         
-          </div>
-          <div class="swiper-slide relative flex flex-col items-center justify-center text-center">
-            <img src="./images/154_7b08c622aa-fw24-ecom-7678-full.avif" alt="Item 4" />
-           
-          </div>
-        </div>
-
-        <!-- Custom Navigation buttons inside the Swiper container -->
-        <div class="swiper-navigation">
-          <div class="
-        
-          
-          custom-prev-button
-          
-          ">
-          <!--   swiper-button-prev   -->
-            <i class="fa-solid fa-arrow-right   left-navigation"></i>
-          </div>
-          <div class=" custom-next-button">
-            <i class="fa-solid fa-arrow-right"></i>
-
-            <!-- swiper-button-next -->
-          </div>
-        </div>
+  <div class="swiper-container max-w-9 mx-auto overflow-hidden relative">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide relative flex flex-col items-center justify-center text-center">
+        <img src="./images/136_20f1cfb103-fw24-ecom-8088-full.avif" alt="Item 1" />
+        <p class="size-options">
+          <span>XS </span> <span> S</span> <span> M </span> <span>L </span> <span>XL</span>
+        </p>
+      </div>
+      <div class="swiper-slide relative flex flex-col items-center justify-center text-center">
+        <img src="./images/136_85b7022b47-fw24-ecom-8063-full.avif" alt="Item 2" />
+        <p class="size-options">
+          <span>XS </span> <span> S</span> <span> M </span> <span>L </span> <span>XL</span>
+        </p>
+      </div>
+      <div class="swiper-slide relative flex flex-col items-center justify-center text-center">
+        <img src="./images/146_d79a018132-fw24-ecom-7904-full.webp" alt="Item 3" />
+        <p class="size-options">
+          <span>XS </span> <span> S</span> <span> M </span> <span>L </span> <span>XL</span>
+        </p>
+      </div>
+      <div class="swiper-slide relative flex flex-col items-center justify-center text-center">
+        <img src="./images/154_7b08c622aa-fw24-ecom-7678-full.avif" alt="Item 4" />
+        <p class="size-options">
+          <span>XS </span> <span> S</span> <span> M </span> <span>L </span> <span>XL</span>
+        </p>
+      </div>
     </div>
 
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Custom Navigation buttons -->
+    <div class="swiper-navigation">
+      <div class="custom-prev-button">
+        <i class="fa-solid fa-arrow-right left-navigation"></i>
+      </div>
+      <div class="custom-next-button">
+        <i class="fa-solid fa-arrow-right"></i>
+      </div>
+    </div>
+  </div>
 
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script>
     const swiper = new Swiper('.swiper-container', {
       loop: true,
@@ -140,17 +139,16 @@
       spaceBetween: 20,
     });
 
-
     const swiperContainer = document.querySelector('.swiper-container');
-const navigation = document.querySelector('.swiper-navigation');
+    const navigation = document.querySelector('.swiper-navigation');
 
-swiperContainer.addEventListener('mouseenter', () => {
-  navigation.classList.add('show-navigation');
-});
+    swiperContainer.addEventListener('mouseenter', () => {
+      navigation.classList.add('show-navigation');
+    });
 
-swiperContainer.addEventListener('mouseleave', () => {
-  navigation.classList.remove('show-navigation');
-});
+    swiperContainer.addEventListener('mouseleave', () => {
+      navigation.classList.remove('show-navigation');
+    });
   </script>
 </body>
 </html>
